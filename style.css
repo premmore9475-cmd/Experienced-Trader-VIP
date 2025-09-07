@@ -178,7 +178,7 @@ header button {
 .header-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: right;
 }
 
 .ebook-btn {
@@ -194,3 +194,4 @@ header button {
 .ebook-btn:hover {
   background: #27ae60;
 }
+
