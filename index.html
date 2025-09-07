@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Trading Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body class="dark">
+  <div class="container">
+    <header>
+      <h1>📊 Crypto Trading Dashboard</h1>
+      <a href="your-ebook.pdf" target="_blank" class="ebook-btn">📖 Ebook</a>
+      <button id="themeToggle">🌞 Light Mode</button>
+    </header>
+
+    <section class="charts-container">
+      <!-- Multiple coin charts -->
+      <div class="coin-chart" data-coin="bitcoin">
+        <h2>Bitcoin (BTC) - <span class="price" id="price-bitcoin">Loading...</span></h2>
+        <canvas id="chart-bitcoin"></canvas>
+      </div>
+      <div class="coin-chart" data-coin="ethereum">
+        <h2>Ethereum (ETH) - <span class="price" id="price-ethereum">Loading...</span></h2>
+        <canvas id="chart-ethereum"></canvas>
+      </div>
+      <div class="coin-chart" data-coin="cardano">
+        <h2>Cardano (ADA) - <span class="price" id="price-cardano">Loading...</span></h2>
+        <canvas id="chart-cardano"></canvas>
+      </div>
+    </section>
+
+    <section class="signal">
+      <h2>📌 Trading Signals</h2>
+      <p id="signalText">Enter your signals below 👇</p>
+
+      <!-- Signal Form -->
+      <form id="signalForm">
+        <input type="text" id="coin" placeholder="Coin Name (e.g. Bitcoin)" required>
+        <input type="number" id="entry" placeholder="Entry Price" required>
+        <input type="number" id="tp" placeholder="Target Price (TP)" required>
+        <input type="number" id="sl" placeholder="Stop Loss (SL)" required>
+        <select id="type" required>
+          <option value="BUY">BUY</option>
+          <option value="SELL">SELL</option>
+        </select>
+        <button type="submit">Add Signal</button>
+      </form>
+
+      <div id="signalsList"></div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="contact-boxes">
+      <div class="contact-box">
+        <a href="https://t.me/ExperienceTarder" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="icon">
+          Telegram
+        </a>
+      </div>
+      <div class="contact-box">
+        <a href="https://chat.whatsapp.com/L7V0xEZoL2o3JnXqOjV9cy?mode=ems_copy_c" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="icon">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
