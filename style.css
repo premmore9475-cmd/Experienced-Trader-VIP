@@ -173,3 +173,24 @@ header button {
   width: 20px;
   height: 20px;
 }
+
+/* Header Flex Layout */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ebook-btn {
+  background: #2ecc71;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.ebook-btn:hover {
+  background: #27ae60;
+}
